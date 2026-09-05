@@ -39,6 +39,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="292dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="196dp"
+        android:text="Change Text background color"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
     <TextView
         android:id="@+id/changableText"
         android:layout_width="0dp"
@@ -46,6 +59,7 @@
         android:layout_marginStart="137dp"
         android:layout_marginTop="280dp"
         android:layout_marginBottom="27dp"
+        android:text="Text 0"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

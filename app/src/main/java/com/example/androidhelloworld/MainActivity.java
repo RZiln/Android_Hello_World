@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     TextView changableText;
     Button button;
     Button button2;
+    Button button3;
 
     String[] textList = {"Text 1", "Text 2", "Text 3"};
     int textIndex = 0;
@@ -38,6 +39,26 @@ public class MainActivity extends AppCompatActivity {
         changableText = findViewById(R.id.changableText);
         button = findViewById(R.id.button);
         button2 = findViewById(R.id.button2);
+        button3 = findViewById(R.id.button3);
+
+        button3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Random random = new Random();
+                int color = Color.rgb(
+                        random.nextInt(256),
+                        random.nextInt(256),
+                        random.nextInt(256)
+                );
+
+                changableText.setBackgroundColor(color);
+            }
+
+
+                                   }
+        );
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
