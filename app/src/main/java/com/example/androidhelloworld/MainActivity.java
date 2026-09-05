@@ -1,5 +1,6 @@
 package com.example.androidhelloworld;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,11 +13,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import java.util.List;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
     TextView changableText;
     Button button;
+    Button button2;
 
     String[] textList = {"Text 1", "Text 2", "Text 3"};
     int textIndex = 0;
@@ -34,6 +37,22 @@ public class MainActivity extends AppCompatActivity {
 
         changableText = findViewById(R.id.changableText);
         button = findViewById(R.id.button);
+        button2 = findViewById(R.id.button2);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Random random = new Random();
+                int color = Color.rgb(
+                        random.nextInt(256),
+                        random.nextInt(256),
+                        random.nextInt(256)
+                );
+
+                changableText.setTextColor(color);
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
