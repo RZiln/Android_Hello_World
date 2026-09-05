@@ -16,11 +16,10 @@ import java.util.List;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    //Comment for revert
+
     TextView changableText;
     Button button;
     Button button2;
-    Button button3;
 
     String[] textList = {"Text 1", "Text 2", "Text 3"};
     int textIndex = 0;
